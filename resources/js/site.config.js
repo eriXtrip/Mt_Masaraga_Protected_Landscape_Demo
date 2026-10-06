@@ -21,7 +21,7 @@
  *
  * Example: 'https://masaraga.example.gov.ph' (no trailing slash)
  */
-export const SITE_ORIGIN = '';
+export const SITE_ORIGIN = 'https://mt-masaraga-protected-landscape-dem.vercel.app';
 
 export const SITE_NAME = 'Mt. Masaraga Protected Landscape';
 export const SITE_SHORT_NAME = 'Mt. Masaraga';
