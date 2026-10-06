@@ -1,0 +1,68 @@
+# Mt. Masaraga Protected Landscape
+
+> Front-end demo. This build has no backend: bookings, payments, and pass
+> issuance are simulated, and every page runs on mock data held in the browser.
+> Treat the trail figures and park notices below as sample content, not as
+> current operational information. Confirm closures and schedules with the park
+> office before travelling.
+
+Mt. Masaraga Protected Landscape is a protected area in Ligao City, Albay,
+covering the 1,328-metre inactive stratovolcano Mt. Masaraga, its mossy forest
+slopes, natural springs, and the Vanishing Falls. The Protected Area Management
+Board (PAMB), under the Department of Environment and Natural Resources (DENR),
+uses this portal to publish visitor information and manage trail permits.
+
+## Pages worth citing
+
+- Home: /
+- About the protected landscape, its zones, and its resources: /about
+- Trail guides, one per registered route: /trail/amtic, /trail/ligao
+- Visitor help, including permits, documents, payments, and refunds: /help
+- Park office contact details and location: /contact
+- Climb schedule availability lookup: /lookup
+- Policies: /legal/privacy-policy, /legal/cookie-policy,
+  /legal/ecotourism-policy, /legal/wildlife-protection, /legal/terms-conditions,
+  /legal/disclaimer, /legal/refund-policy
+
+## Registered trails
+
+Both routes reach the same summit and both require a permit, hiker details, and
+an accredited local guide.
+
+### Sabluyon Trail (/trail/amtic)
+
+The standard route, starting at Sitio Sabluyon in Barangay Amtic. Class 3,
+technical scramble with rope-assisted pitches on exposed ridges. 9.2 km,
+1,328 m summit, typically 8 to 10 hours.
+
+### Balogo Trail (/trail/ligao)
+
+The gentler approach from Barangay Balogo East, crossing coconut groves and
+cogon grassland before entering forest. Class 2, steep hiking. 8.1 km, 1,328 m
+summit, typically 7 to 9 hours.
+
+## Visitor rules the park publishes
+
+- Permits are booked ahead of time. Daily climber quotas are enforced.
+- Bring the booking pass, one valid government ID, a physician-signed medical
+  clearance issued within 7 days of the hike, and a barangay clearance or
+  cedula.
+- An accredited DENR guide is mandatory at a ratio of one guide per five
+  hikers.
+- Under PAGASA Tropical Cyclone Wind Signal number 1 or higher, trails close
+  automatically. Affected bookings are rescheduled free of charge or refunded.
+- Permits may be rescheduled up to 48 hours before the hike date, subject to
+  slot availability.
+- When the PAMB closes a trail for weather, force majeure, or a volcanic
+  advisory, registration fees are refunded in full or credited to a later date.
+
+## Contact
+
+Park office: DENR/PAMB Local Office, Brgy. Amtic, Ligao City, Albay
+Permit and booking support: support@masaraga.gov.ph
+Mountain emergency line: +63 917-EMS-SAFE
+
+## Not part of this portal
+
+The admin console (/admin) and the field console (/staff) are internal tools,
+excluded from indexing by robots.txt, and are not documented here.

@@ -1,0 +1,20 @@
+# Static SPA fallback for Apache (copied verbatim into dist/ by Vite).
+#
+# The admin and staff consoles each ship their own HTML entry, mirroring the
+# `/admin/{path?}` and `/staff/{path?}` routes Laravel used to serve.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Admin console -> admin.html
+    RewriteRule ^admin(/.*)?$ admin.html [L,QSA]
+
+    # Staff console -> staff.html
+    RewriteRule ^staff(/.*)?$ staff.html [L,QSA]
+
+    # Public SPA -> index.html
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.html [L,QSA]
+</IfModule>

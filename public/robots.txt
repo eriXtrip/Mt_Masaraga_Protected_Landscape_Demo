@@ -1,0 +1,21 @@
+# Mt. Masaraga Protected Landscape
+#
+# The Sitemap line is appended at build time by vite.config.js, once
+# SITE_ORIGIN in resources/js/site.config.js holds the deployed origin.
+#
+# Crawlers that fetch /llms.txt are pointed at that file here; it carries the
+# same route inventory as sitemap.xml in plain text.
+
+User-agent: *
+Allow: /
+
+# Internal consoles sit behind a client-side role check, so there is nothing
+# useful for a crawler to index and indexing them would leak route names.
+Disallow: /admin
+Disallow: /admin.html
+Disallow: /staff
+Disallow: /staff.html
+
+# Per-visitor tools: thin, form-driven, and not linked from anywhere else.
+Disallow: /lookup
+Disallow: /hiker

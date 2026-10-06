@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Park Staff Console | Mt. Masaraga Protected Landscape</title>
+
+    <!--
+        The staff console is a private tool behind a client-side role check.
+        noindex is set here for crawlers that do not run JavaScript, and again
+        at runtime by staff.jsx so it survives client-side navigation.
+    -->
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="description" content="Field operations console for park staff and accredited guides at Mt. Masaraga Protected Landscape. Not for public indexing.">
+    <meta name="theme-color" content="#39670d">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="/staff-manifest.json">
+    <link rel="apple-touch-icon" href="/assets/icon-192.png">
+    <link rel="icon" type="image/x-icon" href="/MT. MASARAGA.ico" />
+</head>
+
+<body>
+    <div id="staff-app"></div>
+    <script type="module" src="/resources/js/staff.jsx"></script>
+</body>
+
+</html>
