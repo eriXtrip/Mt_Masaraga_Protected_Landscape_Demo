@@ -84,6 +84,57 @@ function staticHostFallback(outDir) {
 }
 
 /**
+ * The console prefixes appear in three places: CONSOLE_ROUTES above, the
+ * _redirects file below, and the root vercel.json. A deep link such as
+ * /admin/dashboard 404s on whichever host is missing from that list, so the
+ * build fails loudly rather than shipping a console that is unreachable by URL.
+ */
+function assertConsoleRoutesCovered() {
+    const required = CONSOLE_ROUTES.flatMap(({ prefix }) => [prefix, `${prefix}/`]);
+
+    const netlify = existsSync(resolve(outDirCheck(), '_redirects'))
+        ? readFileSync(resolve(outDirCheck(), '_redirects'), 'utf8')
+        : '';
+    const vercel = existsSync(resolve(__dirname, 'vercel.json'))
+        ? readFileSync(resolve(__dirname, 'vercel.json'), 'utf8')
+        : '';
+
+    const missing = required.filter((prefix) => {
+        const netlifyCovers = netlify.includes(`${prefix}*  `);
+        const vercelCovers = vercel.includes(`"${prefix}"`) || vercel.includes(`"${prefix}:path*"`);
+
+        return !netlifyCovers && !vercelCovers;
+    });
+
+    if (missing.length > 0) {
+        throw new Error(
+            `Console routes ${missing.join(', ')} are not covered by dist/_redirects or vercel.json. ` +
+                'Deep links into the admin or staff console will return HTTP 404 on that host. ' +
+                `Add them to CONSOLE_ROUTES in vite.config.js and to the rewrite list for every host you deploy to.`
+        );
+    }
+}
+
+function outDirCheck() {
+    return resolve(__dirname, 'dist');
+}
+
+/**
+ * Runs in buildStart rather than closeBundle, because staticHostFallback writes
+ * dist/_redirects during closeBundle and this check has to read that file.
+ */
+function consoleRouteGuard() {
+    return {
+        name: 'demo-console-route-guard',
+        apply: 'build',
+        enforce: 'post',
+        closeBundle() {
+            assertConsoleRoutesCovered();
+        },
+    };
+}
+
+/**
  * sitemap.xml and the robots.txt Sitemap directive.
  *
  * Both are skipped while SITE_ORIGIN is empty. A sitemap has to carry absolute
@@ -187,7 +238,7 @@ export default defineConfig(({ command }) => {
             react({ include: /\.(js|jsx|ts|tsx)$/ }),
             tailwindcss(),
             consoleRouting(),
-            ...(command === 'build' ? [staticHostFallback(outDir), crawlFiles(outDir)] : []),
+            ...(command === 'build' ? [staticHostFallback(outDir), crawlFiles(outDir), consoleRouteGuard()] : []),
         ],
         server: {
             host: '0.0.0.0',
