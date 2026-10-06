@@ -25,6 +25,7 @@ const STEPS = [
 
 const NOT_AVAILABLE = [
     'Email confirmation and verification codes',
+    'QR Code Scanning',
     'Server-side data validation',
     'Persistent data saving (data is only stored locally in your browser)',
     'Real booking, payment, and pass issuance end-to-end',
