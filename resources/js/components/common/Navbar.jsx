@@ -371,7 +371,7 @@ export default function Navbar() {
                             </li>
                         )}
 
-                        <li className="mt-2 border-t border-outline-variant/30 pt-4">
+                        {/* <li className="mt-2 border-t border-outline-variant/30 pt-4">
                             {isLoggedIn ? (
                                 <Button
                                     variant="outline"
@@ -405,7 +405,7 @@ export default function Navbar() {
                                     </Link>
                                 </div>
                             )}
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>

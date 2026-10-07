@@ -25,14 +25,14 @@ export default function Overview() {
 
     return (
         <section ref={sectionRef} className="relative w-full overflow-hidden px-6 pt-16 pb-6 md:px-5 lg:px-10">
-            <div className="max-w-6xl mx-auto pt-20">
+            <div className="max-w-6xl mx-auto pt-10 lg:pt-20">
                 {/* Two Column Modern Spatial Hero Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
                     {/* Left Content & Interactive Stats Column */}
                     <div
                         className={`lg:col-span-6 flex flex-col justify-between space-y-6 transition-all duration-700 ease-out ${isInView
-                                ? 'opacity-100 translate-y-0'
-                                : 'opacity-0 translate-y-8'
+                            ? 'opacity-100 translate-y-0'
+                            : 'opacity-0 translate-y-8'
                             }`}
                     >
                         <div>
@@ -51,8 +51,8 @@ export default function Overview() {
                             <div
                                 style={{ transitionDelay: '200ms' }}
                                 className={`grid grid-cols-2 sm:grid-cols-4 gap-2.5 transition-all duration-700 ease-out ${isInView
-                                        ? 'opacity-100 translate-y-0'
-                                        : 'opacity-0 translate-y-6'
+                                    ? 'opacity-100 translate-y-0'
+                                    : 'opacity-0 translate-y-6'
                                     }`}
                             >
                                 {/* Stat 1 */}
@@ -102,8 +102,8 @@ export default function Overview() {
                     <div
                         style={{ transitionDelay: '350ms' }}
                         className={`lg:col-span-6 relative flex flex-col min-h-125 lg:min-h-140 rounded-3xl overflow-hidden border border-[#c2cfc5] shadow-xl group/card transition-all duration-700 ease-out ${isInView
-                                ? 'opacity-100 translate-y-0 scale-100'
-                                : 'opacity-0 translate-y-8 scale-95'
+                            ? 'opacity-100 translate-y-0 scale-100'
+                            : 'opacity-0 translate-y-8 scale-95'
                             }`}
                     >
                         {/* Dynamic Landscape Photography Layers */}
