@@ -34,7 +34,7 @@ export const SITE_DESCRIPTION =
 export const SITE_LANG = 'en-PH';
 export const SITE_LOCALE = 'en_PH';
 
-export const TITLE_TEMPLATE = '%s | Mt. Masaraga Protected Landscape';
+export const TITLE_TEMPLATE = '%s | Mt. Masaraga Demo';
 
 // Shown as og:image when a page has no better one. 1200x630 is the size
 // Facebook, LinkedIn, and Slack crop to, so it is the size to author.
