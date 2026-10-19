@@ -4,6 +4,7 @@ import {
     DEFAULT_OG_IMAGE,
     ORGANIZATION,
     SITE_DESCRIPTION,
+    SITE_CREATOR,
     SITE_LANG,
     SITE_NAME,
 } from '../site.config';
@@ -97,6 +98,11 @@ export const schema = {
             name: SITE_NAME,
             description: SITE_DESCRIPTION,
             inLanguage: SITE_LANG,
+            creator: {
+                '@type': 'Person',
+                name: SITE_CREATOR,
+                jobTitle: 'Web Developer',
+            },
             publisher: { '@id': ORG_ID },
         };
     },

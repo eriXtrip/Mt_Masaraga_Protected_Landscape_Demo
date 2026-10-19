@@ -25,9 +25,10 @@ export const SITE_ORIGIN = 'https://mt-masaraga-protected-landscape-dem.vercel.a
 
 export const SITE_NAME = 'Mt. Masaraga Protected Landscape';
 export const SITE_SHORT_NAME = 'Mt. Masaraga';
+export const SITE_CREATOR = 'Jon Eric D. Tripulca';
 export const SITE_TAGLINE = 'Permits, trail schedules, and visitor information for Mt. Masaraga, Ligao City, Albay.';
 export const SITE_DESCRIPTION =
-    'Permits, trail schedules, and park updates for Mt. Masaraga Protected Landscape in Ligao City, Albay, managed by DENR and the PAMB.';
+    'Demo-only concept system for DENR CENRO Guinobatan, showcasing Mt. Masaraga permits, trail schedules, and park updates. Not an official government service.';
 
 // BCP 47 tag for the document, Open Graph locale for the page.
 export const SITE_LANG = 'en-PH';

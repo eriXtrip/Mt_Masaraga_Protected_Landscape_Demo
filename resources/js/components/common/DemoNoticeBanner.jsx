@@ -205,6 +205,9 @@ export default function DemoNoticeBanner() {
                             <p className="mt-3 text-xs leading-relaxed text-amber-900/80 dark:text-amber-100/80">
                                 These screens and flows are present in the UI for demonstration purposes only.
                             </p>
+                            <p className="mt-3 border-t border-amber-300/70 pt-3 text-xs text-amber-900/80 dark:border-amber-800/70 dark:text-amber-100/80">
+                                Developed by <span className="font-semibold">Jon Eric D. Tripulca</span>
+                            </p>
                         </section>
                     </div>
                 </div>
