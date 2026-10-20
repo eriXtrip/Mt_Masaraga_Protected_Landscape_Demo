@@ -143,7 +143,7 @@ export function applySeo({
     upsertMeta('property', 'og:image', imageUrl);
     upsertMeta('property', 'og:image:alt', imageAlt);
 
-    upsertMeta('name', 'twitter:card', image ? 'summary_large_image' : 'summary');
+    upsertMeta('name', 'twitter:card', 'summary_large_image');
     upsertMeta('name', 'twitter:title', formattedTitle);
     upsertMeta('name', 'twitter:description', description);
     upsertMeta('name', 'twitter:image', imageUrl);
