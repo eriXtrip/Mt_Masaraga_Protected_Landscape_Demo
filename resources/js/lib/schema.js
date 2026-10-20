@@ -100,8 +100,10 @@ export const schema = {
             inLanguage: SITE_LANG,
             creator: {
                 '@type': 'Person',
+                '@id': `${SITE_URL}#creator`,
                 name: SITE_CREATOR,
                 jobTitle: 'Web Developer',
+                url: SITE_URL,
             },
             publisher: { '@id': ORG_ID },
         };
